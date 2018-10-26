@@ -1,11 +1,12 @@
 require 'sinatra'
 
 get "/" do
-    @name = params["name"]
-    if params.length <= 0 || @name == ""  
-        @name = "Hola desconocida"
+    if params == {}
+        @name = "Desconocido" 
+    elsif params["nombre"] == ""  
+        @name = "Desconocido"
     else 
-        @name = "Hola #{@name}"
+        @name = params["nombre"]
     end 
     erb :index
 end
