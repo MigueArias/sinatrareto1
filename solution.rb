@@ -2,9 +2,9 @@ require 'sinatra'
 
 get "/" do
     if params == {}
-        @name = "Desconocido" 
+        @name = "desconocido" 
     elsif params["nombre"] == ""  
-        @name = "Desconocido"
+        @name = "desconocido"
     else 
         @name = params["nombre"]
     end 
